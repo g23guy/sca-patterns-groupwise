@@ -64,12 +64,11 @@ rpm: clean prep
 
 commit: rpm
 	@echo commit: Committing changes to GIT
-	@git status
 	@git commit -a -m "Committing Source: $(OBSPACKAGE)-$(VERSION)-$(RELEASE)"
 	@echo
 
 push: commit
-	@echo push: Pushing change to GIT
+	@echo push: Pushing changes to GIT
 	@git push -u origin master
 	@echo
 
