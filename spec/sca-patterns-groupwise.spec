@@ -1,6 +1,3 @@
-#
-# spec file for package scdiag (Version 1.1)
-#
 # Copyright (C) 2013 SUSE LLC
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
@@ -14,6 +11,7 @@
 %define patuser root
 %define patgrp root
 %define patdir /var/opt/%{produser}/patterns
+%define category GroupWise
 
 Name:         sca-patterns-groupwise
 Summary:      Supportconfig Analysis Patterns for Groupwise
@@ -45,15 +43,15 @@ Authors:
 %install
 pwd;ls -la
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{patdir}/GroupWise
-install -m 544 patterns/GroupWise/* $RPM_BUILD_ROOT/%{patdir}/GroupWise
+install -d $RPM_BUILD_ROOT/%{patdir}/%{category}
+install -m 544 patterns/%{category}/* $RPM_BUILD_ROOT/%{patdir}/%{category}
 
 %files
 %defattr(-,%{patuser},%{patgrp})
 %dir /var/opt/%{produser}
 %dir %{patdir}
-%dir %{patdir}/GroupWise
-%attr(555,%{patuser},%{patgrp}) %{patdir}/GroupWise/*
+%dir %{patdir}/%{category}
+%attr(555,%{patuser},%{patgrp}) %{patdir}/%{category}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
