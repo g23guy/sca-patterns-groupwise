@@ -37,6 +37,17 @@ Authors:
 --------
     Jason Record <jrecord@suse.com>
 
+%prep
+%setup -q
+
+%build
+
+%install
+pwd;ls -la
+rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT/%{patdir}/GroupWise
+install -m 544 patterns/GroupWise/* $RPM_BUILD_ROOT/%{patdir}/GroupWise
+
 %files
 %defattr(-,%{patuser},%{patgrp})
 %dir /var/opt/%{produser}
@@ -44,14 +55,8 @@ Authors:
 %dir %{patdir}/GroupWise
 %attr(555,%{patuser},%{patgrp}) %{patdir}/GroupWise/*
 
-%prep
-%setup -q
-
-%build
-make build
-
-%install
-make install
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Wed Dec 18 2013 jrecord@suse.com
