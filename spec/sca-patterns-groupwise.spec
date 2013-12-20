@@ -22,7 +22,7 @@ Distribution: SUSE Linux Enterprise
 Vendor:       SUSE Support
 License:      GPLv2
 Autoreqprov:  on
-Version:      1.1
+Version:      1.2
 Release:      1
 Source:       %{name}-%{version}.tar.gz
 BuildRoot:    %{_tmppath}/%{name}-%{version}
