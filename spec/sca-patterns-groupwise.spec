@@ -15,7 +15,7 @@
 %define category GroupWise
 
 Name:         sca-patterns-groupwise
-Summary:      Supportconfig Analysis Patterns for Groupwise
+Summary:      Supportconfig Analysis Patterns for GroupWise
 Group:        Documentation/SuSE
 Distribution: SUSE Linux Enterprise
 Vendor:       SUSE Support
