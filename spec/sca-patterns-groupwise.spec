@@ -18,12 +18,10 @@ Name:         sca-patterns-groupwise
 Summary:      Supportconfig Analysis Patterns for GroupWise
 URL:          https://bitbucket.org/g23guy/sca-patterns-groupwise
 Group:        Documentation/SuSE
-Distribution: SUSE Linux Enterprise
-Vendor:       SUSE Support
 License:      GPL-2.0
 Autoreqprov:  on
 Version:      1.3
-Release:      0
+Release:      1
 Source:       %{name}-%{version}.tar.gz
 BuildRoot:    %{_tmppath}/%{name}-%{version}
 Buildarch:    noarch
